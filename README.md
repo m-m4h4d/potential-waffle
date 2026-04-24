@@ -19,17 +19,17 @@ This project is licensed under the **Apache License 2.0**. See the [LICENSE](LIC
 
 ## Development Setup
 
-1. Install dependencies:
+- Install dependencies:
 
-    ```bash
-    npm install
-    ```
+```bash
+npm install
+```
 
-2. Run the development server:
+- Run the development server:
 
-    ```bash
-    npm run dev
-    ```
+```bash
+npm run dev
+```
 
 ## Contributing
 
