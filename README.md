@@ -21,15 +21,15 @@ This project is licensed under the **Apache License 2.0**. See the [LICENSE](LIC
 
 1. Install dependencies:
 
-```bash
-npm install
-```
+    ```bash
+    npm install
+    ```
 
 2. Run the development server:
 
-```bash
-npm run dev
-```
+    ```bash
+    npm run dev
+    ```
 
 ## Contributing
 
