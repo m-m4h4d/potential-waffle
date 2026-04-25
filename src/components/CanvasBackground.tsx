@@ -5,7 +5,6 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 import styles from './CanvasBackground.module.css';
 
-// Move impure function outside the component to satisfy purity rules
 const generateParticles = (count: number) => {
   const pos = new Float32Array(count * 3);
   for (let i = 0; i < count; i++) {
@@ -23,14 +22,15 @@ const generateParticles = (count: number) => {
 function ParticleField() {
   const ref = useRef<THREE.Points>(null!);
 
-  // Memoize the stable result of the generation
   const positions = useMemo(() => generateParticles(5000), []);
 
-  useFrame((state) => {
+  const timeRef = useRef(0);
+
+  useFrame((state, delta) => {
     if (ref.current) {
-      const time = state.clock.getElapsedTime();
-      ref.current.rotation.x = time / 15;
-      ref.current.rotation.y = time / 20;
+      timeRef.current += delta;
+      ref.current.rotation.x = timeRef.current / 15;
+      ref.current.rotation.y = timeRef.current / 20;
     }
   });
 

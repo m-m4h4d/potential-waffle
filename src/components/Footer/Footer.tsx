@@ -11,10 +11,10 @@ const Footer = () => {
           <p>Full Stack Web & Mobile App Developer building seamless digital experiences.</p>
         </div>
         <div className={styles.socials}>
-          <a title="Github" href="https://github.com" target="_blank" rel="noopener noreferrer"><SocialIcon name="github" size={20} /></a>
-          <a title="Linkedin" href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><SocialIcon name="linkedin" size={20} /></a>
-          <a title="X" href="https://twitter.com" target="_blank" rel="noopener noreferrer"><SocialIcon name="x" size={20} /></a>
-          <a title="Mail" href="mailto:[EMAIL_ADDRESS]"><SocialIcon name="mail" size={20} /></a>
+          <a title="Github" href="https://github.com/m-m4h4d" target="_blank" rel="noopener noreferrer"><SocialIcon name="github" size={20} /></a>
+          <a title="Linkedin" href="https://www.linkedin.com/in/muhammadm4h4d/" target="_blank" rel="noopener noreferrer"><SocialIcon name="linkedin" size={20} /></a>
+          <a title="X" href="https://x.com/m_m_peykar" target="_blank" rel="noopener noreferrer"><SocialIcon name="x" size={20} /></a>
+          <a title="Mail" href="mailto:mahadbinashfaq@gmail.com"><SocialIcon name="mail" size={20} /></a>
         </div>
         <div className={styles.copyright}>
           <p>&copy; {new Date().getFullYear()} Portfolio. All rights reserved.</p>

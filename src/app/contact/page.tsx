@@ -38,7 +38,7 @@ export default function Contact() {
               </div>
               <div className={styles.infoText}>
                 <h3>Email</h3>
-                <p>contact@mahad.dev</p>
+                <p>mahadbinashfaq@gmail.com</p>
               </div>
             </div>
             <div className={styles.infoItem}>
@@ -47,7 +47,7 @@ export default function Contact() {
               </div>
               <div className={styles.infoText}>
                 <h3>Phone</h3>
-                <p>+1 (234) 567-890</p>
+                <p>+92 304 0009032</p>
               </div>
             </div>
             <div className={styles.infoItem}>
