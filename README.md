@@ -14,7 +14,8 @@ This project is licensed under the **Apache License 2.0**. See the [LICENSE](LIC
 
 - **Framework**: Next.js 14 (App Router)
 - **Language**: TypeScript
-- **Styling**: Tailwind CSS v4
+- **Styling**: Vanilla CSS
+- **Animation**: Framer Motion
 - **Deployment**: Vercel
 
 ## Development Setup

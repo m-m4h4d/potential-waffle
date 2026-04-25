@@ -61,7 +61,7 @@ const projects = [
 export default function Projects() {
   return (
     <div className={styles.projects}>
-      <motion.div 
+      <motion.div
         className={styles.header}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -73,7 +73,7 @@ export default function Projects() {
 
       <div className={styles.grid}>
         {projects.map((project, index) => (
-          <motion.div 
+          <motion.div
             key={project.title}
             className={`${styles.projectCard} glass`}
             initial={{ opacity: 0, y: 30 }}
@@ -81,7 +81,7 @@ export default function Projects() {
             transition={{ delay: 0.2 + index * 0.1 }}
           >
             <div className={styles.imageWrapper}>
-              <Image 
+              <Image
                 src={project.image}
                 alt={project.title}
                 fill

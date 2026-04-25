@@ -5,15 +5,15 @@ import { motion } from 'framer-motion';
 import styles from './About.module.css';
 
 const skills = [
-  "React", "Next.js", "TypeScript", "Node.js", 
-  "Flutter", "React Native", "PostgreSQL", "MongoDB", 
+  "React", "Next.js", "TypeScript", "Node.js",
+  "Flutter", "React Native", "PostgreSQL", "MongoDB",
   "Docker", "AWS", "UI/UX Design", "Three.js"
 ];
 
 export default function About() {
   return (
     <div className={styles.about}>
-      <motion.div 
+      <motion.div
         className={styles.header}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -24,7 +24,7 @@ export default function About() {
       </motion.div>
 
       <div className={styles.content}>
-        <motion.div 
+        <motion.div
           className={styles.bio}
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -35,11 +35,11 @@ export default function About() {
             I am a dedicated Full Stack Web and Mobile App Developer with over 5 years of experience building high-performance, scalable applications. My passion lies in creating seamless user experiences that combine beautiful design with robust functionality.
           </p>
           <p>
-            Whether it's a complex web ecosystem using Next.js and Node.js or a fluid mobile application with Flutter, I strive for excellence in every line of code I write. I am constantly exploring new technologies to stay at the forefront of the industry.
+            Whether it&apos;s a complex web ecosystem using Next.js and Node.js or a fluid mobile application with Flutter, I strive for excellence in every line of code I write. I am constantly exploring new technologies to stay at the forefront of the industry.
           </p>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           className={styles.skills}
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -48,7 +48,7 @@ export default function About() {
           <h2>My Skills</h2>
           <div className={styles.skillGrid}>
             {skills.map((skill, index) => (
-              <motion.div 
+              <motion.div
                 key={skill}
                 className={`${styles.skillCard} glass`}
                 initial={{ opacity: 0, scale: 0.8 }}

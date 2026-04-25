@@ -13,7 +13,7 @@ export default function Contact() {
 
   return (
     <div className={styles.contact}>
-      <motion.div 
+      <motion.div
         className={styles.header}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -24,7 +24,7 @@ export default function Contact() {
       </motion.div>
 
       <div className={styles.content}>
-        <motion.div 
+        <motion.div
           className={styles.info}
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -62,7 +62,7 @@ export default function Contact() {
           </div>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           className={`${styles.formWrapper} glass`}
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}

@@ -8,7 +8,7 @@ import styles from "./Home.module.css";
 export default function Home() {
   return (
     <div className={styles.hero}>
-      <motion.div 
+      <motion.div
         className={styles.profileImageWrapper}
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
@@ -30,14 +30,14 @@ export default function Home() {
         transition={{ delay: 0.4 }}
       >
         <h1 className={styles.title}>
-          Hi, I'm <span>Mahad</span>
+          Hi, I&apos;m <span>Mahad</span>
         </h1>
         <p className={styles.subtitle}>
           Full Stack Web and Mobile App Developer crafting premium digital solutions with passion and precision.
         </p>
       </motion.div>
 
-      <motion.div 
+      <motion.div
         className={styles.cta}
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}

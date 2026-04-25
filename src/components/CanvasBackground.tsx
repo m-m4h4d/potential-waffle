@@ -12,7 +12,7 @@ const generateParticles = (count: number) => {
     const r = 5 * Math.sqrt(Math.random());
     const theta = Math.random() * 2 * Math.PI;
     const phi = Math.acos(2 * Math.random() - 1);
-    
+
     pos[i * 3] = r * Math.sin(phi) * Math.cos(theta);
     pos[i * 3 + 1] = r * Math.sin(phi) * Math.sin(theta);
     pos[i * 3 + 2] = r * Math.cos(phi);
@@ -22,7 +22,7 @@ const generateParticles = (count: number) => {
 
 function ParticleField() {
   const ref = useRef<THREE.Points>(null!);
-  
+
   // Memoize the stable result of the generation
   const positions = useMemo(() => generateParticles(5000), []);
 
@@ -61,7 +61,7 @@ function ParticleField() {
 export default function CanvasBackground() {
   return (
     <div className={styles.canvasContainer}>
-      <Canvas 
+      <Canvas
         camera={{ position: [0, 0, 5], fov: 75 }}
         dpr={[1, 2]}
         gl={{ antialias: false }}
