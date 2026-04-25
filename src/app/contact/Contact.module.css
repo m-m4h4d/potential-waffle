@@ -1,0 +1,144 @@
+.contact {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.header h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.header h1 span {
+  color: var(--primary);
+}
+
+.header p {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.info h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.infoGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.iconWrapper {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background: var(--primary-glow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+}
+
+.infoText h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+}
+
+.infoText p {
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.formWrapper {
+  padding: 3rem;
+  border-radius: 24px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.inputGroup label {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.inputGroup input,
+.inputGroup textarea {
+  padding: 1rem;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--card-border);
+  color: var(--foreground);
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+[data-theme='dark'] .inputGroup input,
+[data-theme='dark'] .inputGroup textarea {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: transparent;
+}
+
+.submitBtn {
+  padding: 1rem;
+  border-radius: 12px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.submitBtn:hover {
+  background: var(--secondary);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 968px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+  
+  .header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .formWrapper {
+    padding: 2rem;
+  }
+}

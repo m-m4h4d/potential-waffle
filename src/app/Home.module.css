@@ -1,0 +1,90 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  gap: 2rem;
+  min-height: 80vh;
+}
+
+.profileImageWrapper {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid var(--primary);
+  box-shadow: 0 0 30px var(--primary-glow);
+  position: relative;
+}
+
+.profileImage {
+  object-fit: cover;
+}
+
+.title {
+  font-size: 4rem;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.title span {
+  color: var(--primary);
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0;
+}
+
+.cta {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.primaryBtn {
+  padding: 0.8rem 2rem;
+  background: var(--primary);
+  color: white;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.primaryBtn:hover {
+  background: var(--secondary);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.secondaryBtn {
+  padding: 0.8rem 2rem;
+  border: 1px solid var(--card-border);
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.secondaryBtn:hover {
+  background: var(--card-bg);
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .cta {
+    flex-direction: column;
+    width: 100%;
+  }
+}
