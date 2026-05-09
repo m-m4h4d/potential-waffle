@@ -55,5 +55,13 @@ export const projects: Project[] = [
     tags: ["React", "D3.js", "Express", "MongoDB", "GitHub"],
     github: "https://github.com/m-m4h4d/my-app",
     demo: "https://my-app-khaki-theta.vercel.app"
+  },
+  {
+    title: "Presence+",
+    description: "Presence+ automates the classroom experience using Bluetooth Low Energy (BLE). No more manual call-outs, no more forgotten logs. Just seamless, secure, and smart attendance.",
+    image: "/assets/project7.png",
+    tags: ["Flutter", "Bluetooth", "GitHub", "Firebase", "Android", "iOS", "Cross-Platform"],
+    github: "https://github.com/MuhammadFahad0340/bluetooth_attendance",
+    demo: "https://presence-plus-six.vercel.app/"
   }
 ];
