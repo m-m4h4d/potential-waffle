@@ -1,14 +1,46 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, MapPin, Phone, Send } from 'lucide-react';
+import { Mail, MapPin, Phone, Send, CheckCircle, AlertCircle } from 'lucide-react';
 import styles from './Contact.module.css';
 
 export default function Contact() {
-  const handleSubmit = (e: React.FormEvent) => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+  const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { id, value } = e.target;
+    setFormData(prev => ({ ...prev, [id]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert('Thank you for your message! This is a demo form.');
+    setStatus('submitting');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setStatus('success');
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        setStatus('error');
+      }
+    } catch (error) {
+      console.error('Submission error:', error);
+      setStatus('error');
+    }
   };
 
   return (
@@ -68,25 +100,76 @@ export default function Contact() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <form className={styles.form} onSubmit={handleSubmit}>
-            <div className={styles.inputGroup}>
-              <label htmlFor="name">Name</label>
-              <input type="text" id="name" placeholder="Your Name" required />
+          {status === 'success' ? (
+            <div className={styles.successMessage}>
+              <CheckCircle size={48} className={styles.successIcon} />
+              <h3>Message Sent!</h3>
+              <p>Thank you for reaching out. I&apos;ll get back to you as soon as possible.</p>
+              <button
+                type="button"
+                onClick={() => setStatus('idle')}
+                className={styles.secondaryBtn}
+                style={{ marginTop: '1rem' }}
+              >
+                Send Another Message
+              </button>
             </div>
-            <div className={styles.inputGroup}>
-              <label htmlFor="email">Email</label>
-              <input type="email" id="email" placeholder="Your Email" required />
-            </div>
-            <div className={styles.inputGroup}>
-              <label htmlFor="message">Message</label>
-              <textarea id="message" rows={5} placeholder="Your Message" required></textarea>
-            </div>
-            <button type="submit" className={styles.submitBtn}>
-              Send Message <Send size={18} style={{ marginLeft: '8px' }} />
-            </button>
-          </form>
+          ) : (
+            <form className={styles.form} onSubmit={handleSubmit}>
+              <div className={styles.inputGroup}>
+                <label htmlFor="name">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="Your Name"
+                  required
+                  value={formData.name}
+                  onChange={handleChange}
+                />
+              </div>
+              <div className={styles.inputGroup}>
+                <label htmlFor="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="Your Email"
+                  required
+                  value={formData.email}
+                  onChange={handleChange}
+                />
+              </div>
+              <div className={styles.inputGroup}>
+                <label htmlFor="message">Message</label>
+                <textarea
+                  id="message"
+                  rows={5}
+                  placeholder="Your Message"
+                  required
+                  value={formData.message}
+                  onChange={handleChange}
+                ></textarea>
+              </div>
+
+              {status === 'error' && (
+                <div className={styles.errorMessage}>
+                  <AlertCircle size={20} />
+                  <span>Something went wrong. Please try again.</span>
+                </div>
+              )}
+
+              <button
+                type="submit"
+                className={styles.submitBtn}
+                disabled={status === 'submitting'}
+              >
+                {status === 'submitting' ? 'Sending...' : 'Send Message'}
+                {status !== 'submitting' && <Send size={18} style={{ marginLeft: '8px' }} />}
+              </button>
+            </form>
+          )}
         </motion.div>
       </div>
     </div>
   );
 }
+
