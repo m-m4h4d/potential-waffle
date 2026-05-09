@@ -8,8 +8,8 @@ import PageTransition from "@/components/PageTransition";
 import styles from "./layout.module.css";
 
 export const metadata: Metadata = {
-  title: "Portfolio | Full Stack Developer",
-  description: "Personal portfolio website of a Full Stack Web and Mobile App Developer.",
+  title: "Mahad | Full Stack Developer",
+  description: "Mahad - Full Stack Web and Mobile App Developer portfolio. Crafting premium digital solutions with passion and precision.",
 };
 
 export default function RootLayout({
