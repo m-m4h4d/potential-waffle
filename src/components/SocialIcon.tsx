@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface SocialIconProps {
-  name: 'github' | 'linkedin' | 'x' | 'mail';
+  name: 'github' | 'linkedin' | 'x' | 'mail' | 'youtube' | 'behance';
   size?: number;
   className?: string;
 }
@@ -71,6 +71,41 @@ const SocialIcon: React.FC<SocialIconProps> = ({ name, size = 24, className }) =
       >
         <rect width="20" height="16" x="2" y="4" rx="2" />
         <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+      </svg>
+    ),
+    youtube: (
+      <svg
+        width={size}
+        height={size}
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className={className}
+      >
+        <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.42a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.42 8.6.42 8.6.42s6.88 0 8.6-.42a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z" />
+        <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
+      </svg>
+    ),
+    behance: (
+      <svg
+        width={size}
+        height={size}
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className={className}
+      >
+        <path d="M12 12H9v3h3a1.5 1.5 0 0 0 0-3z" />
+        <path d="M11 7H9v3h2a1.5 1.5 0 0 0 0-3z" />
+        <path d="M15 11h5" />
+        <path d="M18 11.5a2.5 2.5 0 1 1-2.5 2.5" />
+        <rect x="2" y="4" width="20" height="16" rx="2" />
       </svg>
     ),
   };
