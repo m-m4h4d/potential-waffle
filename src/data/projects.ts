@@ -63,5 +63,13 @@ export const projects: Project[] = [
     tags: ["Flutter", "Bluetooth", "GitHub", "Firebase", "Android", "iOS", "Cross-Platform"],
     github: "https://github.com/MuhammadFahad0340/bluetooth_attendance",
     demo: "https://presence-plus-six.vercel.app/"
+  },
+  {
+    title: "Mahad | Full Stack Developer",
+    description: "Personal Portfolio Website.",
+    image: "/assets/project8.png",
+    tags: ["React", "Tailwind CSS", "Next.js", "TypeScript", "GitHub", "Vercel", "Open Source"],
+    github: "https://github.com/m-m4h4d/potential-waffle",
+    demo: "https://m-mahad-profile.vercel.app/"
   }
 ];
