@@ -71,5 +71,13 @@ export const projects: Project[] = [
     tags: ["React", "Tailwind CSS", "Next.js", "TypeScript", "GitHub", "Vercel", "Open Source"],
     github: "https://github.com/m-m4h4d/potential-waffle",
     demo: "https://m-mahad-profile.vercel.app/"
+  },
+  {
+    title: "TaskPulse",
+    description: "TaskPulse is a comprehensive task management application built with Flutter, designed to help individuals organize their daily tasks efficiently. It features a modern, responsive UI, task categorization, priority levels, and local data persistence. Made by Muhammad Mahad.",
+    image: "/assets/project9.png",
+    tags: ["Flutter", "Dart", "GitHub", "Vercel", "Open Source"],
+    github: "https://github.com/m-m4h4d/mahad_expense_tracker",
+    demo: "https://task-pulse-manager.netlify.app/"
   }
 ];
