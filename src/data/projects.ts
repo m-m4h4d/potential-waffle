@@ -22,7 +22,7 @@ export const projects: Project[] = [
     image: "/assets/project6.png",
     tags: ["Flutter", "GitHub", "Firebase", "Cross-Platform"],
     github: "https://github.com/m-m4h4d/mahad_expense_tracker",
-    demo: "https://spend-wise-expense-tracker.netlify.app"
+    demo: "https://spendwise-eight-weld.vercel.app/"
   },
   {
     title: "Nust Policy Copilot",
@@ -78,6 +78,14 @@ export const projects: Project[] = [
     image: "/assets/project9.png",
     tags: ["Flutter", "Dart", "GitHub", "Vercel", "Open Source"],
     github: "https://github.com/m-m4h4d/mahad-task-manager",
-    demo: "https://task-pulse-manager.netlify.app/"
+    demo: "https://taskpulse-rho.vercel.app/"
+  },
+  {
+    title: "BazaarFlow",
+    description: "BazaarFlow is a modern E-commerce platform that integrates elegant design with powerful specifications, offering unparalleled performance, dark mode capabilities, and an intuitive user flow for all your shopping needs.",
+    image: "/assets/project10.png",
+    tags: ["Flutter", "Dart", "GitHub", "Vercel", "Open Source"],
+    github: "https://github.com/m-m4h4d/bazaarflow",
+    demo: "https://bazaarflow.vercel.app/"
   }
 ];
