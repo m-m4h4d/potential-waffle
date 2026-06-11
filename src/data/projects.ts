@@ -95,5 +95,13 @@ export const projects: Project[] = [
     tags: ["Flutter", "Dart", "GitHub", "Vercel", "Open Source"],
     github: "https://github.com/m-m4h4d/edupulse",
     demo: "https://edupulse-phi-jet.vercel.app/"
+  },
+  {
+    title: "ServixPro",
+    description: "ServixPro is a cross-platform Service Marketplace application where customers can discover and book service providers for home and corporate needs.",
+    image: "/assets/project12.png",
+    tags: ["Flutter", "Dart", "GitHub", "Vercel", "Open Source"],
+    github: "https://github.com/m-m4h4d/servixpro",
+    demo: "https://servixpro.vercel.app/"
   }
 ];
