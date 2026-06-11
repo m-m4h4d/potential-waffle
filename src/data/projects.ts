@@ -9,12 +9,12 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title: "Axiom Studio Website",
+    title: "Vectra Studio Website",
     description: "3D Parallax effect using three.js and canvas API.",
     image: "/assets/project1.png",
     tags: ["GitHub", "Open Source", "Three.js", "Canvas", "JavaScript"],
-    github: "https://github.com/XRomieo/3d-Parallax-Sample",
-    demo: "https://3d-parallax-sample.vercel.app"
+    github: "https://github.com/m-m4h4d/vectra",
+    demo: "https://vectra-five-red.vercel.app/"
   },
   {
     title: "SpendWise - Expense Tracker",
@@ -87,5 +87,13 @@ export const projects: Project[] = [
     tags: ["Flutter", "Dart", "GitHub", "Vercel", "Open Source"],
     github: "https://github.com/m-m4h4d/bazaarflow",
     demo: "https://bazaarflow.vercel.app/"
+  },
+  {
+    title: "EduPulse",
+    description: "EduPulse is a stunning, cross-platform learning management application. Seamlessly switch between your mobile device and the web without missing a beat.",
+    image: "/assets/project11.png",
+    tags: ["Flutter", "Dart", "GitHub", "Vercel", "Open Source"],
+    github: "https://github.com/m-m4h4d/edupulse",
+    demo: "https://edupulse-phi-jet.vercel.app/"
   }
 ];
