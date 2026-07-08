@@ -61,8 +61,8 @@ export const projects: Project[] = [
     description: "Presence+ automates the classroom experience using Bluetooth Low Energy (BLE). No more manual call-outs, no more forgotten logs. Just seamless, secure, and smart attendance.",
     image: "/assets/project7.png",
     tags: ["Flutter", "Bluetooth", "GitHub", "Firebase", "Android", "iOS", "Cross-Platform"],
-    github: "https://github.com/MuhammadFahad0340/bluetooth_attendance",
-    demo: "https://presence-plus-six.vercel.app/"
+    github: "https://github.com/m-m4h4d/bluetooth_attendance",
+    demo: "https://presenceplus-phi.vercel.app"
   },
   {
     title: "Mahad | Full Stack Developer",
